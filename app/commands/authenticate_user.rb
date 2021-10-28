@@ -7,7 +7,14 @@ class AuthenticateUser
   end
 
   def call
-    JsonWebToken.encode(user_id: user.id) if user
+    return 'invalid credentials' unless user
+
+    payload = {
+      first_name: user.first_name,
+      last_name: user.last_name,
+      role: user.role
+    }
+    JsonWebToken.encode(payload, )
   end
 
   private

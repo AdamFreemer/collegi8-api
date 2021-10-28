@@ -1,0 +1,28 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :role %>
+    <%= form.text_field :role %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit :Submit, class: 'btn btn-success btn-outline-primary' %> |
+    <%= link_to 'Cancel', users_path %>
+  </div>
+<% end %>

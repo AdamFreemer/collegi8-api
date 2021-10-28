@@ -2,13 +2,14 @@ class AuthenticationController < ApplicationController
   skip_before_action :authenticate_request
 
   def authenticate
-    binding.pry
     command = AuthenticateUser.call(params[:email], params[:password])
 
     if command.success?
-      render json: { auth_token: command.result }
+      puts '--- authentication authorized'
+      render json: { auth_token: command.result }, status: 200
     else
-      render json: { error: command.errors }, status: :unauthorized
+      puts '--- authentication failure'
+      render json: {}, status: 200
     end
   end
 end
