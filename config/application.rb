@@ -25,6 +25,7 @@ module Collegi8Api
     config.load_defaults 6.1
 
     config.autoload_paths << Rails.root.join('lib')
+    config.assets.precompile# += %w( application.css )
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

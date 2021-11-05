@@ -5,13 +5,23 @@ ruby '2.7.2'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'awesome_print'
+gem 'bootstrap', '~> 4.3.1'
+gem 'cocoon'
+gem 'font-awesome-sass', '~> 5.6.1'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'httparty'
+gem 'jquery-rails'
 gem 'jwt'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
+gem 'sass-rails'
 gem 'simple_command'
+gem 'turbolinks'
+
+# gem 'devise'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
